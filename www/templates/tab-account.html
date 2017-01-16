@@ -1,0 +1,64 @@
+<ion-view view-title="Account">
+    <div class="bar bar-subheader no-background-image">
+
+        <!-- <div class="item-input-inset"> -->
+        <label class="item-input-wrapper item-button-right">
+            <i class="icon ion-ios-search placeholder-icon"></i>
+            <input type="search" placeholder="Search" ng-model="q" style="background-color: #eee;">
+            <div class="buttons">
+                <button class="button button-clear" ng-click="q=''">Cancel</button>
+            </div>
+        </label>
+        <!-- </div> -->
+
+    </div>
+
+
+    <!-- <ion-content class="has-header has-footer has-tabs has-subheader padding applyFooter"> -->
+    <ion-content class="has-header has-tabs has-subheader padding">
+        <div class="button-bar">
+            <button style="height: 30px; font-size: smaller; border-radius: 0;" ng-repeat="(key, value) in settings.Lines" ng-click="settings.Lines.{{key}} = !settings.Lines.{{key}}" ng-class="!value ? 'button-outline' : ''" class="button padding button-{{key | lowercase}}">
+                {{key}}
+        </div>
+        <!-- <ion-list>
+      <ion-checkbox class="checkbox-inset item-button-right" ng-repeat="station in settings.StationsArr | filter: q as results" ng-model="settings.Stations[station.Name].isFavorite" ng-change="saveProperties()" style="margin: 5px;">
+        <span style="font-size: large">{{station.Name}}
+        </span>
+      </ion-checkbox>
+    </ion-list> -->
+        <div class="list">
+            <div class="item item-icon-left item-button-right" ng-repeat="station in settings.StationsArr | filter: q as results" ng-model="settings.Stations[station.Name].isFavorite" ng-change="saveProperties()" style="margin: 5px;" ng-class="{'background-subdued' : settings.Stations[station.Name].isFavorite}">
+                <i class="icon ion-android-train" ng-click="settings.Stations[station.Name].isFavorite = !settings.Stations[station.Name].isFavorite; saveProperties()" ng-class="{'font-subdued': !settings.Stations[station.Name].isFavorite}"></i>
+                <span style="font-size: large" ng-class="{'font-bold' : settings.Stations[station.Name].isFavorite}">
+                    <span ng-repeat="line in settings.Stations[station.Name].Line"
+                    style="padding:2px; color: {{lineToRgb(line)}}; background-color: {{lineToRgb(line)}};">-</span> {{station.Name}}
+                </span>
+                <br>
+
+                <div class="buttons">
+                    <button class="button button-stable" ng-click="settings.Stations[station.Name].WalkTime = settings.Stations[station.Name].WalkTime + 1; saveProperties();">
+                        <b>+</b>
+                    </button>
+                    <button class="button button-stable" ng-click="settings.Stations[station.Name].WalkTime = (settings.Stations[station.Name].WalkTime == 0 ? 0 : (settings.Stations[station.Name].WalkTime - 1)); saveProperties();">
+                        <b>-</b>
+                    </button>
+                    <br>
+                </div>
+                <br>
+                <i class="ion-android-walk" ng-show="settings.Stations[station.Name].WalkTime != 0"></i>
+                <span ng-class="{'font-subdued': settings.Stations[station.Name].WalkTime == 0}">
+                    {{settings.Stations[station.Name].WalkTime === 0 ? "Please set walk time" : "Walk time: " + settings.Stations[station.Name].WalkTime}}
+                </span>
+                <br> {{lineToRgb(line)}}
+                </ion-checkbox>
+            </div>
+
+            <div style="text-align: center; color: lightgray;" ng-if="results.length == 0">
+                No results from search
+            </div>
+
+    </ion-content>
+    <!-- <div class="bar bar-footer bar-stable sub-footer">
+    <div class="title">Footer</div>
+  </div> -->
+</ion-view>

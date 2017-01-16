@@ -1,0 +1,48 @@
+<ion-view view-title="Schedule for All Trains">
+    
+    <div class="float-button" ng-click="scrollTop()">
+        <span class="height-fix">
+            <a class="content">
+              <i class="ion-android-arrow-dropup-circle"></i>
+            </a>
+          </span>
+    </div>
+
+    <ion-content class="padding">
+        <div style="text-align: center; color: lightgray;">
+            {{lastUpdated}}
+        </div>
+        <ion-refresher pulling-text="Pull to refresh" refreshicng-icon="ion-loading-b" on-refresh="doRefresh()">
+        </ion-refresher>
+        <!-- <div class="list list-inset">
+      <label class="item item-input">
+        <i class="icon ion-search placeholder-icon"></i>
+        <input type="search"
+            ng-model="q"
+            placeholder="Search">
+      </label>
+    </div> -->
+
+        <div class="bar bar-header item-input-inset">
+            <label class="item-input-wrapper">
+                <i class="icon ion-ios-search placeholder-icon"></i>
+                <input type="search" placeholder="Search" ng-model="q">
+            </label>
+            <button class="button button-clear" style="font-size: 14px;" ng-click="q = ''">
+                Cancel
+            </button>
+        </div>
+
+        <div class="list card animate-repeat train-card" ng-repeat="train in trains | filter: q as results track by $index">
+            <i class="ion-android-train" style="color: {{train.rgb}}"></i> {{train.Line}} to {{train.DestinationName}}
+            <em>({{train.Car}} cars)</em>
+            <br> @{{train.LocationName}} in {{train.Min}} min
+            <!-- @{{train.LocationName}} in {{train.Min}} min ({{train.LocationCode}}) -->
+        </div>
+        <li class="animate-repeat" ng-if="results.length == 0">
+            <div style="text-align: center; color: lightgray;">
+                ...
+            </div>
+            </div>
+    </ion-content>
+</ion-view>

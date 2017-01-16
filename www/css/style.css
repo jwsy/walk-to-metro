@@ -1,0 +1,278 @@
+/* Empty. Add your own CSS if you like */
+/* from https://docs.angularjs.org/api/ng/directive/ngRepeat */
+.has-footer.has-tabs {
+  bottom: 93px;
+}
+
+.sub-footer{
+bottom:50px !important;
+}
+
+.font-large {
+    font-size: large;
+}
+
+.font-subdued {
+    font-style: italic;
+    color: #BBB;
+}
+
+.font-bold {
+    font-weight: bold;
+}
+
+.background-subdued {
+    background-color: #EFEFEF;
+}
+
+.has-two-subheaders {
+    top: 144px;
+}
+
+.train-card {
+    padding: 15px;
+}
+
+.red-run {
+    color: red;
+    font-weight: bold;
+}
+
+/*input[type="search"] {
+    font-size: large;
+    line-height: normal;
+}
+
+.ion-search:before {
+    font-size: 24px;
+}
+
+.ion-ios-search:before {
+    font-size: 24px;
+}
+
+.item-input-inset .item-input-wrapper input{
+    line-height: normal;
+}*/
+
+.no-background-image {
+    background-image: none;
+}
+/*
+Styles for lines in account tab
+*/
+
+.checkbox-bl input:before,
+.checkbox-bl .checkbox-icon:before {
+  border-color: rgb(10, 148, 214);}
+
+.checkbox-bl input:checked:before,
+.checkbox-bl input:checked + .checkbox-icon:before {
+  background: rgb(10, 148, 214);
+  border-color: rgb(10, 148, 214); }
+
+.checkbox-gr input:before,
+.checkbox-gr .checkbox-icon:before {
+  border-color: rgb(0, 176, 82); }
+
+.checkbox-gr input:checked:before,
+.checkbox-gr input:checked + .checkbox-icon:before {
+  background: rgb(0, 176, 82);
+  border-color: rgb(0, 176, 82); }
+
+.checkbox-or input:before,
+.checkbox-or .checkbox-icon:before {
+  border-color: rgb(222, 135, 3); }
+
+.checkbox-or input:checked:before,
+.checkbox-or input:checked + .checkbox-icon:before {
+  background: rgb(222, 135, 3);
+  border-color: rgb(222, 135, 3); }
+
+.checkbox-rd input:before,
+.checkbox-rd .checkbox-icon:before {
+  border-color: rgb(191, 18, 56); }
+
+.checkbox-rd input:checked:before,
+.checkbox-rd input:checked + .checkbox-icon:before {
+  background: rgb(191, 18, 56);
+  border-color: rgb(191, 18, 56); }
+
+.checkbox-sv input:before,
+.checkbox-sv .checkbox-icon:before {
+  border-color: rgb(161, 163, 161); }
+
+.checkbox-sv input:checked:before,
+.checkbox-sv input:checked + .checkbox-icon:before {
+  background: rgb(161, 163, 161);
+  border-color: rgb(161, 163, 161); }
+
+.checkbox-yl input:before,
+.checkbox-yl .checkbox-icon:before {
+  border-color: rgb(247, 212, 23); }
+
+.checkbox-yl input:checked:before,
+.checkbox-yl input:checked + .checkbox-icon:before {
+  background: rgb(247, 212, 23);
+  border-color: rgb(247, 212, 23); }
+
+
+/*
+    Button colors
+*/
+
+.button.button-bl {
+    border-color: transparent; background-color: rgb(10,148,214); color: #fff; }
+.button.button-bl:hover {
+    color: #fff; text-decoration: none; }
+.button.button-bl.active, .button.button-bl.activated {
+    background-color: rgba(10,148,214,.7); }
+.button.button-bl.button-clear {
+    border-color: transparent; background: none; box-shadow: none; color: rgb(10,148,214); }
+.button.button-bl.button-icon {
+    border-color: transparent; background: none; }
+.button.button-bl.button-outline {
+    border-color: rgb(10,148,214); background: transparent; color: rgb(10,148,214); }
+.button.button-bl.button-outline.active, .button.button-bl.button-outline.activated {
+    background-color: rgb(10,148,214); box-shadow: none; color: #fff; }
+
+.button.button-gr {
+    border-color: transparent; background-color: rgb(0,176,82); color: #fff; }
+.button.button-gr:hover {
+    color: #fff; text-decoration: none; }
+.button.button-gr.active, .button.button-gr.activated {
+    background-color: rgba(0,176,82,.7); }
+.button.button-gr.button-clear {
+    border-color: transparent; background: none; box-shadow: none; color: rgb(0,176,82); }
+.button.button-gr.button-icon {
+    border-color: transparent; background: none; }
+.button.button-gr.button-outline {
+    border-color: rgb(0,176,82); background: transparent; color: rgb(0,176,82); }
+.button.button-gr.button-outline.active, .button.button-gr.button-outline.activated {
+    background-color: rgb(0,176,82); box-shadow: none; color: #fff; }
+
+.button.button-or {
+    border-color: transparent; background-color: rgb(222,135,3); color: #fff; }
+.button.button-or:hover {
+    color: #fff; text-decoration: none; }
+.button.button-or.active, .button.button-or.activated {
+    background-color: rgba(222,135,3,.7);}
+.button.button-or.button-clear {
+    border-color: transparent; background: none; box-shadow: none; color: rgb(222,135,3); }
+.button.button-or.button-icon {
+    border-color: transparent; background: none; }
+.button.button-or.button-outline {
+    border-color: rgb(222,135,3); background: transparent; color: rgb(222,135,3); }
+.button.button-or.button-outline.active, .button.button-or.button-outline.activated {
+    background-color: rgb(222,135,3); box-shadow: none; color: #fff; }
+
+.button.button-rd {
+    border-color: transparent; background-color: rgb(191,18,56); color: #fff; }
+.button.button-rd:hover {
+    color: #fff; text-decoration: none; }
+.button.button-rd.active, .button.button-rd.activated {
+    background-color: rgba(191,18,56,.7); }
+.button.button-rd.button-clear {
+    border-color: transparent; background: none; box-shadow: none; color: rgb(191,18,56); }
+.button.button-rd.button-icon {
+    border-color: transparent; background: none; }
+.button.button-rd.button-outline {
+    border-color: rgb(191,18,56); background: transparent; color: rgb(191,18,56); }
+.button.button-rd.button-outline.active, .button.button-rd.button-outline.activated {
+    background-color: rgb(191,18,56); box-shadow: none; color: #fff; }
+
+.button.button-sv {
+    border-color: transparent; background-color: rgb(161,163,161); color: #fff; }
+.button.button-sv:hover {
+    color: #fff; text-decoration: none; }
+.button.button-sv.active, .button.button-sv.activated {
+    background-color: rgba(161,163,161,.7); }
+.button.button-sv.button-clear {
+    border-color: transparent; background: none; box-shadow: none; color: rgb(161,163,161); }
+.button.button-sv.button-icon {
+    border-color: transparent; background: none; }
+.button.button-sv.button-outline {
+    border-color: rgb(161,163,161); background: transparent; color: rgb(161,163,161); }
+.button.button-sv.button-outline.active, .button.button-sv.button-outline.activated {
+    background-color: rgb(161,163,161); box-shadow: none; color: #fff; }
+
+.button.button-yl {
+    border-color: transparent; background-color: rgb(247,212,23); color: #fff; }
+.button.button-yl:hover {
+    color: #fff; text-decoration: none; }
+.button.button-yl.active, .button.button-yl.activated {
+    background-color: rgba(247,212,23,.7); }
+.button.button-yl.button-clear {
+    border-color: transparent; background: none; box-shadow: none; color: rgb(247,212,23); }
+.button.button-yl.button-icon {
+    border-color: transparent; background: none; }
+.button.button-yl.button-outline {
+    border-color: rgb(247,212,23); background: transparent; color: rgb(247,212,23); }
+.button.button-yl.button-outline.active, .button.button-yl.button-outline.activated {
+    background-color: rgb(247,212,23); box-shadow: none; color: #fff; }
+
+/* animate-repeat */
+.animate-repeat {
+  line-height:30px;
+  list-style:none;
+  box-sizing:border-box;
+  font-size: large;
+}
+
+.animate-repeat i{
+  font-size: 40px;
+}
+
+.animate-repeat.ng-move,
+.animate-repeat.ng-enter,
+.animate-repeat.ng-leave {
+  transition:all linear 0.2s;
+}
+
+.animate-repeat.ng-leave.ng-leave-active,
+.animate-repeat.ng-move,
+.animate-repeat.ng-enter {
+  opacity:0;
+  max-height:0;
+}
+
+.animate-repeat.ng-leave,
+.animate-repeat.ng-move.ng-move-active,
+.animate-repeat.ng-enter.ng-enter-active {
+  opacity:1;
+  max-height:30px;
+}
+
+/*
+    Floating button
+*/
+.float-button {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  width: 30px;
+  padding: 30px;
+  font-size: 40px;
+  /*background: $warning;*/
+  position: fixed;
+  bottom: 50px; /* Adjust to where you want it */
+  /*right: 20px;*/
+  right: 10%;
+  z-index: 9999;
+}
+
+.float-button .height-fix {
+  margin-top: 100%;
+}
+
+.float-button .content {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  margin-top: -20px; /* Note, this must be half the font size */
+  /*color: $light;*/
+  color: rgba(128,128,128,0.1);
+}

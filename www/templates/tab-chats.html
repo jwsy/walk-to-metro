@@ -1,0 +1,51 @@
+<ion-view view-title="Metro Dashboard">
+  <ion-content class="padding">
+    <ion-refresher pulling-text="Pull to refresh" refreshing-icon="ion-loading-b" on-refresh="doRefresh()">
+    </ion-refresher>
+    <!-- <h3>Metro Schedule</h3> -->
+    <!-- <label for="response">Response</label>
+    <textarea name="response" ng-model="display" disabled="disabled"></textarea> -->
+    <!-- <button ng-click="getData()">Get Train Data</button> -->
+    <!-- <input type="search" ng-model="q0" placeholder="filter trains..." aria-label="filter trains" /> -->
+    <div class="list list-inset">
+      <label class="item item-input">
+        <i class="icon ion-search placeholder-icon"></i>
+        <input type="search"
+            ng-model="q"
+            placeholder="Search">
+      </label>
+    </div>
+    <li class="animate-repeat" ng-repeat="train in trains | filter: q as results">
+      <i class="ion-android-train" style="color: {{train.rgb}}"></i> {{train.Line}} to {{train.DestinationName}}
+      <em>({{train.Car}} cars)</em>
+      <br>
+      @{{train.LocationName}} in {{train.Min}} min ({{train.LocationCode}})
+      <hr>
+    </li>
+    <li class="animate-repeat" ng-if="results.length == 0">
+      Pull to refresh
+    </li>
+    <!-- <p>
+      For help sending push notifications, join the <a href="https://apps.ionic.io/signup" target="_blank">Ionic Platform</a> and check out <a href="http://docs.ionic.io/docs/push-overview" target="_blank">Ionic Push</a>. We also have other services available.
+    </p> -->
+  </ion-content>
+</ion-view>
+
+
+<!-- <ion-view view-title="Chats">
+  <ion-content>
+    This is some stock data from the fantastic Ionic Framework! You can ignore the stuff below.
+    <ion-list>
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="chat in chats" type="item-text-wrap" href="#/tab/chats/{{chat.id}}">
+        <img ng-src="{{chat.face}}">
+        <h2>{{chat.name}}</h2>
+        <p>{{chat.lastText}}</p>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+
+        <ion-option-button class="button-assertive" ng-click="remove(chat)">
+          Delete
+        </ion-option-button>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view> -->

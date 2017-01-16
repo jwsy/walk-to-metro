@@ -1,0 +1,51 @@
+<ion-view view-title="Walk To Metro?">
+
+    <div class="float-button" ng-click="scrollTop()">
+        <span class="height-fix">
+            <a class="content">
+              <i class="ion-android-arrow-dropup-circle"></i>
+            </a>
+          </span>
+    </div>
+
+    <ion-content class="padding">
+        <ion-refresher pulling-text="Pull to refresh" refreshing-icon="ion-loading-b" on-refresh="doRefresh()">
+        </ion-refresher>
+        <div style="text-align: center; color: lightgray;">
+            {{lastUpdated}}
+        </div>
+        <!-- <div class="list list-inset">
+      <label class="item item-input">
+        <i class="icon ion-search placeholder-icon"></i>
+        <input type="search"
+            ng-model="q"
+            placeholder="Search">
+      </label> -->
+        </div>
+
+
+
+        <div class="list card animate-repeat train-card" ng-repeat="train in trains | orderBy:walkTrainVal | filter: q as results track by $index"
+            ng-class="{'background-subdued': 0 <= train.Min - getWalkTime(train.LocationName) && train.Min - getWalkTime(train.LocationName) <= 3}">
+            <i class="ion-android-walk" ng-show="0 <= train.Min - getWalkTime(train.LocationName) && train.Min - getWalkTime(train.LocationName) <= 3"></i>
+            <i class="ion-arrow-right-a" ng-show="0 <= train.Min - getWalkTime(train.LocationName) && train.Min - getWalkTime(train.LocationName) <= 3"></i>
+            <i class="ion-android-train" style="color: {{train.rgb}}"></i> {{train.Line}} to {{train.DestinationName}}
+            <em>({{train.Car}} cars)</em>
+            <br><b>@{{train.LocationName}}</b> in {{train.Min}} min
+            <!-- Walk time {{getWalkTime(train.LocationName)}} min /  -->
+            <span 
+            ng-class="{'red-run': 0 <= train.Min - getWalkTime(train.LocationName) && train.Min - getWalkTime(train.LocationName) <= 2}">
+            - wait time {{train.Min - getWalkTime(train.LocationName)}} min
+            </span>
+            <!-- <br> -->
+            <!-- <br> {{absWalkDiff(train.Min, train.LocationName)}} -->
+            <!-- <br> {{walkTrainVal(train)}} -->
+            <!-- {{train.Min - getWalkTime(train.LocationName)}} -->
+            <!-- @{{train.LocationName}} in {{train.Min}} min ({{train.LocationCode}}) -->
+        </div>
+
+        <div class="animate-repeat" ng-if="results.length == 0" style="text-align: center; color: lightgray;">
+            ...
+        </div>
+    </ion-content>
+</ion-view>
